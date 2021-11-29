@@ -12,33 +12,6 @@
 /***********************************
  * General Section Fields
  ***********************************/
-
- // Theme color field
-Epsilon_Customizer::add_field(
-    'hostza_theme_color',
-    array(
-        'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Theme Color', 'hostza' ),
-        'description' => esc_html__( 'Select the theme color.', 'hostza' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'section'     => 'hostza_general_section',
-        'default'     => '#f81c1c',
-    )
-);
-
- // Theme box shadow color field
-Epsilon_Customizer::add_field(
-    'hostza_theme_box_shadow_color',
-    array(
-        'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Box Color', 'hostza' ),
-        'description' => esc_html__( 'Select the theme color.', 'hostza' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'section'     => 'hostza_general_section',
-        'default'     => 'rgba(248, 28, 28, 0.1)',
-    )
-);
-
  
 // Header background color field
 Epsilon_Customizer::add_field(
@@ -49,7 +22,7 @@ Epsilon_Customizer::add_field(
         'description' => esc_html__( 'Select the header background color.', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_header_section',
-        'default'     => '#f81c1c',
+        'default'     => '#2E004B',
     )
 );
 
@@ -65,6 +38,18 @@ Epsilon_Customizer::add_field(
     )
 );
 
+// Header nav menu border color field
+Epsilon_Customizer::add_field(
+    'hostza_header_menu_border_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Header menu border color', 'hostza' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'hostza_header_section',
+        'default'     => '#00D363',
+    )
+);
+
 // Header nav menu hover color field
 Epsilon_Customizer::add_field(
     'hostza_header_menu_hover_color',
@@ -73,19 +58,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Header menu hover color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_header_section',
-        'default'     => '#000000',
-    )
-);
-
-// Other Page Header menu hover color field
-Epsilon_Customizer::add_field(
-    'hostza_ohter_page_header_menu_hover_color',
-    array(
-        'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Other Page Header menu hover color', 'hostza' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'section'     => 'hostza_header_section',
-        'default'     => '#f81c1c',
+        'default'     => '#ffffff',
     )
 );
 
@@ -97,7 +70,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Dropdown menu color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_header_section',
-        'default'     => '#ffffff',
+        'default'     => '#000000',
     )
 );
 
@@ -109,7 +82,32 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Dropdown menu hover color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_header_section',
-        'default'     => '#ffffff',
+        'default'     => '#000000',
+    )
+);
+
+
+
+// Header Right section styles
+Epsilon_Customizer::add_field(
+    'header_right_btn_styles_separator',
+    array(
+        'type'        => 'epsilon-separator',
+        'label'       => esc_html__( 'Header Right Button styles', 'hostza' ),
+        'section'     => 'hostza_header_section',
+
+    )
+);
+
+// Header right button color field
+Epsilon_Customizer::add_field(
+    'hostza_header_right_btn_color',
+    array(
+        'type'        => 'epsilon-color-picker',
+        'label'       => esc_html__( 'Button color', 'hostza' ),
+        'sanitize_callback' => 'sanitize_text_field',
+        'section'     => 'hostza_header_section',
+        'default'     => '#00D363',
     )
 );
 
@@ -278,22 +276,10 @@ Epsilon_Customizer::add_field(
     'hostza_footer_bg_color',
     array(
         'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Footer Top Background Color', 'hostza' ),
+        'label'       => esc_html__( 'Footer Background Color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_footer_section',
-        'default'     => '#161f23',
-    )
-);
-
-// Footer bottom background color field
-Epsilon_Customizer::add_field(
-    'hostza_footer_copy_bg_color',
-    array(
-        'type'        => 'epsilon-color-picker',
-        'label'       => esc_html__( 'Footer Copyright Background Color', 'hostza' ),
-        'sanitize_callback' => 'sanitize_text_field',
-        'section'     => 'hostza_footer_section',
-        'default'     => '#121b1f',
+        'default'     => '#2E004B',
     )
 );
 
@@ -329,7 +315,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Anchor Color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_footer_section',
-        'default'     => '#f81c1c',
+        'default'     => '#BABABA',
     )
 );
 
@@ -341,7 +327,7 @@ Epsilon_Customizer::add_field(
         'label'       => esc_html__( 'Footer Anchor Hover Color', 'hostza' ),
         'sanitize_callback' => 'sanitize_text_field',
         'section'     => 'hostza_footer_section',
-        'default'     => '#f81c1c',
+        'default'     => '#00D363',
     )
 );
 

@@ -30,10 +30,12 @@ function hostza_common_custom_css(){
 
 		$headerBg          		  = hostza_opt( 'hostza_header_bg_color');
 		$menuColor          	  = hostza_opt( 'hostza_header_menu_color' );
+		$menuBorderColor          = hostza_opt( 'hostza_header_menu_border_color' );
 		$menuHoverColor           = hostza_opt( 'hostza_header_menu_hover_color' );
 		$otherPageMenuHoverColor  = hostza_opt( 'hostza_ohter_page_header_menu_hover_color' );
 		$dropMenuColor            = hostza_opt( 'hostza_header_drop_menu_color' );
 		$dropMenuHovColor         = hostza_opt( 'hostza_header_drop_menu_hover_color' );
+		$headerBtnColor           = hostza_opt( 'hostza_header_right_btn_color' );
 
 
 		$footerwbgColor     	  = hostza_opt('hostza_footer_bg_color');
@@ -51,6 +53,10 @@ function hostza_common_custom_css(){
 		$customcss ="
 			.hero-banner{
 				{$header_bg_img}
+			}
+
+			.header-area .main-header-area.sticky {
+				background-color: {$headerBg};
 			}
 			
 			.priceing_part .single_pricing_item .single_pricing_text:after, .artist_part .single_blog_item .social_icon a:hover, .btn_4
@@ -106,11 +112,25 @@ function hostza_common_custom_css(){
 				color: {$headerTop_col}
 			}
 
+			.header-area .main-header-area .main-menu ul li a, .header-area .log_chat_area .login, .header-area .log_chat_area .login i
+			{
+			color: {$menuColor};
+			}
+
+			.header-area .main-header-area .main-menu ul li a::before
+			{
+			background: {$menuBorderColor};
+			}
+
 			@media (min-width: 1024px){
 				.main_menu .main-menu-item ul li a
 				{
 				color: {$menuColor}!important;
 				}
+			}
+			.header-area .main-header-area .main-menu ul li a:hover, .header-area .log_chat_area .login:hover, .header-area .log_chat_area .login:hover i
+			{
+			   color: {$menuHoverColor};
 			}
 			.main_menu .main-menu-item ul li a:hover, .single_page_menu.menu_fixed .main-menu-item ul li .nav-link:hover
 			{
@@ -121,6 +141,12 @@ function hostza_common_custom_css(){
 			   color: {$otherPageMenuHoverColor}!important;
 			}
 
+			.header-area .main-header-area .main-menu ul li .submenu li a {
+				color: {$dropMenuColor};
+			}
+			.header-area .main-header-area .main-menu ul li .submenu li a:hover {
+				color: {$dropMenuHovColor};
+			}
 			.home_menu .main-menu-item ul.dropdown-menu li .dropdown-item.nav-link, .single_page_menu .main-menu-item ul.dropdown-menu li .dropdown-item.nav-link {
 				color: {$dropMenuColor}!important;
 			}
@@ -129,23 +155,33 @@ function hostza_common_custom_css(){
 				color: {$dropMenuHovColor}!important;
 			}
 
-			.footer-area {
+			.header-area .log_chat_area .live_chat_btn a {
+				background: {$headerBtnColor};
+			}
+
+			.header-area .log_chat_area .live_chat_btn a:hover {
+				background: transparent;
+				border-color: {$headerBtnColor};
+				color: {$headerBtnColor} !important;
+			}
+
+			footer.footer {
 				background-color: {$footerwbgColor};
 			}
 
-			.footer-area .single-footer-widget p, .footer-area .widget_hostza_newsletter .input-group input, .footer-area .copyright_part_text p, .footer-area .footer_2 .social_icon a, .copyright_part p
+			.footer-area .single-footer-widget p, .footer-area .widget_hostza_newsletter .input-group input, .footer-area .copyright_part_text p, .footer-area .footer_2 .social_icon a, .copyright_part p, .footer .footer_top .footer_widget .newsletter_text, .footer .copy-right_text .copy_right
 			{
 				color: {$footerwTextColor}
 			}
 			.footer-area .widget_hostza_newsletter .input-group, .footer-area .copyright_part_text {
 				border-color: {$footerwTextColor}
 			}
-			.footer-area .single-footer-widget h4, .footer-area .single-footer-widget h5
+			.footer-area .single-footer-widget h4, .footer-area .single-footer-widget h5, .footer .footer_top .footer_widget .footer_title
 			{
 				color: {$widgettitlecolor}
 			}
 
-			.copyright_part a, .footer-area .footer_2 .contact_info span
+			.copyright_part a, .footer-area .footer_2 .contact_info span, .footer .footer_top .footer_widget ul li a, .footer .footer_top .footer_widget .social_icon a, .footer .footer_top .footer_widget p.footer_text.doanar a, .footer .copy-right_text .copy_right a
 			{
 			   color: {$footerwanchorcolor};
 			}
@@ -155,6 +191,14 @@ function hostza_common_custom_css(){
 			.copyright_part a:hover, .footer-area .footer_2 .social_icon a:hover
 			{
 			   color: {$footerwanchorhovcolor}!important;
+			}
+			.footer .footer_top .footer_widget ul li a:hover, .footer .footer_top .footer_widget .social_icon a:hover, .footer .footer_top .footer_widget p.footer_text.doanar a:hover
+			{
+			   color: {$footerwanchorhovcolor};
+			}
+			.footer .footer_top .footer_widget p.footer_text.doanar a:hover
+			{
+			   border-color: unset !important;
 			}
 			.copyright_part
 			{
