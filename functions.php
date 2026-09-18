@@ -102,9 +102,7 @@
 	// Customizer
 	require_once( HOSTZA_DIR_PATH_INC . 'customizer/customizer.php' );
 	// Class autoloader
-	require_once( HOSTZA_DIR_PATH_INC . 'class-epsilon-dashboard-autoloader.php' );
 	// Class hostza dashboard
-	require_once( HOSTZA_DIR_PATH_INC . 'class-epsilon-init-dashboard.php' );
 	// Common css
 	require_once( HOSTZA_DIR_PATH_INC . 'hostza-commoncss.php' );
 	
@@ -144,3 +142,11 @@ if ( ! function_exists( 'hostza_modern_supports' ) ) {
 	}
 	add_action( 'after_setup_theme', 'hostza_modern_supports', 20 );
 }
+
+/**
+ * The theme's Customizer controls.
+ *
+ * Replaces the Epsilon framework: same fields and stored values,
+ * built on core's Customizer API.
+ */
+require_once get_template_directory() . '/inc/customizer/colorlib-customizer/colorlib-customizer.php';
