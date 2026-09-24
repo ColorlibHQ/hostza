@@ -236,20 +236,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'hostza-waypoints-js',
-						'file' 			=> $jsPath.'waypoints.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'hostza-jquery-counterup-js',
-						'file' 			=> $jsPath.'jquery.counterup.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'scrollIt-js',
 						'file' 			=> $jsPath.'scrollIt.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -271,20 +257,6 @@
 						'in_footer' 	=> true
 					),
 					array(
-						'handler'		=> 'hostza-instagram-feed-js',
-						'file' 			=> $jsPath.'jquery.instagramFeed.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'hostza-wow-js',
-						'file' 			=> $jsPath.'wow.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
 						'handler'		=> 'hostza-owl-carousel-js',
 						'file' 			=> $jsPath.'owl.carousel.min.js',
 						'dependency' 	=> array( 'jquery' ),
@@ -294,13 +266,6 @@
 					array(
 						'handler'		=> 'hostza-jquery-slicknav-js',
 						'file' 			=> $jsPath.'jquery.slicknav.min.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> '1.0',
-						'in_footer' 	=> true
-					),
-					array(
-						'handler'		=> 'hostza-nice-select-js',
-						'file' 			=> $jsPath.'nice-select.min.js',
 						'dependency' 	=> array( 'jquery' ),
 						'version' 		=> '1.0',
 						'in_footer' 	=> true
@@ -328,10 +293,17 @@
 					),
 					
 					array(
+						'handler'		=> 'hostza-ui-js',
+						'file' 			=> $jsPath.'colorlib-ui.js',
+						'dependency' 	=> array(),
+						'version' 		=> '2.1.1',
+						'in_footer' 	=> true
+					),
+					array(
 						'handler'		=> 'hostza-js',
 						'file' 			=> $jsPath.'main.js',
-						'dependency' 	=> array( 'jquery' ),
-						'version' 		=> $this->hostza_version,
+						'dependency' 	=> array( 'jquery', 'hostza-ui-js' ),
+						'version' 		=> $this->hostza_version . '-s1',
 						'in_footer' 	=> true
 					),
 
