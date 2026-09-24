@@ -14,6 +14,7 @@ function hostza_sl_enqueue_scripts() {
 
 	wp_localize_script( 'hostza-post-likes', 'simpleLikes', array(
 		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'like'    => esc_html__( 'Like', 'hostza' ),
 		'unlike'  => esc_html__( 'Unlike', 'hostza' )
 	) );
 }

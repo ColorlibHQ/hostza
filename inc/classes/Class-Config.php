@@ -190,12 +190,6 @@
 						'version' 		=> '1.0',
 					),
 					array(
-						'handler'		=> 'hostza-gijgo-css',
-						'file' 			=> $cssPath.'gijgo.css',
-						'dependency' 	=> array(),
-						'version' 		=> '1.0',
-					),
-					array(
 						'handler'		=> 'hostza-nice-select-css',
 						'file' 			=> $cssPath.'nice-select.css',
 						'dependency' 	=> array(),
@@ -205,13 +199,13 @@
 						'handler'		=> 'hostza-default-css',
 						'file' 			=> $cssPath.'default.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0-s3',
+						'version' 		=> '1.0',
 					),
 					array(
 						'handler'		=> 'hostza-style-css',
 						'file' 			=> $cssPath.'style.css',
 						'dependency' 	=> array(),
-						'version' 		=> '1.0',
+						'version' 		=> '1.0-s3',
 					),
 					
 					array(
