@@ -294,15 +294,13 @@ if ( !class_exists( 'Hostza_El_Widgets' ) ) {
             // googleapis js
             wp_register_script( 'maps-googleapis', '//maps.googleapis.com/maps/api/js?key='.esc_attr( $apiKey ) );
 
-            // ajaxchimp js
-            wp_enqueue_script( 'jquery-ajaxchimp', HOSTZA_DIR_ELEMENTOR . 'assets/js/jquery.ajaxchimp.min.js', array('jquery'), '1.0', true );
 
 
             // hostza map custom js
-            wp_register_script( 'hostza-map-custom', HOSTZA_DIR_ELEMENTOR . 'assets/js/map-custom.js', array('jquery'), '1.0', true );
+            wp_register_script( 'hostza-map-custom', HOSTZA_DIR_ELEMENTOR . 'assets/js/map-custom.js', array(), '1.0-s2', true );
 
             // hostza companion main js
-            wp_enqueue_script( 'hostza', HOSTZA_DIR_ELEMENTOR . 'assets/js/hostza-companion-main.js', array( 'jquery', 'jquery-ui-datepicker' ), '1.0', true );
+            wp_enqueue_script( 'hostza', HOSTZA_DIR_ELEMENTOR . 'assets/js/hostza-companion-main.js', array( 'hostza-ui-js' ), '1.0-s2', true );
 
 
             wp_localize_script( 'hostza', 'ajax_object',
